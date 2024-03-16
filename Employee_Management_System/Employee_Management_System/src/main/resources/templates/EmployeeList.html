@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee ManageMent System</title>
+<link  th:href="@{/styles/css/index.css}" rel="stylesheet"/>
+</head>
+<body>
+    <section>
+        <h1 class="h1">Employee List</h1>
+        <div>
+            <a th:href="@{/showAddEmployeeForm}"><button>Add Employee</button></a>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>	
+                    <th>MOB NO</th>
+                    <th>EMAIL</th>
+                    <th>DESIGNATION</th>
+                    <th>DEPARTMENT</th>
+                    <th>ACTIONS</th>
+                </tr>
+                  <tr th:each="employee: ${listOfEmployees}">
+                     <td th:text="${employee.employee_Id}"></td>
+                     <td th:text="${employee.employee_Name}"></td>
+                     <td th:text="${employee.employee_Mobno}"></td>
+                     <td th:text="${employee.employee_Email}"></td>
+                     <td th:text="${employee.employee_Designation}"></td>
+                     <td th:text="${employee.employee_Departement}"></td>
+                     <td><a th:href="@{/showUpdateForm/{id}(id=${employee.employee_Id})}"><button style="background-color: blue;">Update</button></a></td>
+                     <td><a th:href="@{/deleteEmployee/{id}(id=${employee.employee_Id})}"><button>Remove</button></a></td>
+                     </tr>
+                </table>
+        </div>
+    </section>
+</body>
+</html>

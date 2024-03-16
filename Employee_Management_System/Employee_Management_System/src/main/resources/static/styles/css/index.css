@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+body{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.div{
+    border: 2px solid black;
+    width: 30%;
+    border-radius: 20px;
+}
+.section>.div>h2{
+    text-align: center;
+}
+form{
+    width: 100%;
+    margin: 1rem;
+}
+.div>form>label{
+	font-size: 20px;
+	margin-left: 20px;
+}
+.div>form>input{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 80%;
+    padding: 5px;
+}
+.div>form>button{
+    margin-left: 210px;
+    padding: 10px;
+    width: 20%;
+    font-size: larger;
+    border-radius: 20px;
+    background-color: blue;
+    color: wheat;
+    border: none;
+}
+.div>form>a{
+    margin: 1px;
+    text-decoration: underline;
+    color: green;
+    font-size: 20px;
+}
+
+/* Employee list */
+
+.h1{
+    text-align: center;
+    font-size: 30px;
+}
+section>div>a>button{
+    margin-left: 50px;
+    height: 40px;
+    width: 10%;
+    background-color: blue;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+
+}
+table th{
+    border-bottom: 0.35px solid rgb(116, 114, 114);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+ }
+ table td{
+    padding: 2rem;
+    border-bottom: 0.35px dotted rgb(116, 114, 114);
+    font-size: 1.45rem;
+    text-align: center;
+ }
+ table button{
+     width: 150%;
+     border-radius: 5px;
+     border: none;
+     height: 30px;
+     background: red;
+     color: white;
+     cursor: pointer;
+ }

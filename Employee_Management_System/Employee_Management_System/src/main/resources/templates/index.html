@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee ManageMent System</title>
+<link  th:href="@{/styles/css/index.css}" rel="stylesheet"/>
+</head>
+<body>
+    <section class="section">
+        <div class="div">
+            <h2>Add Employee</h2>
+            <form  th:action="@{/saveEmployee}" th:object="${employee}" method="post">
+            <label for="name"> Employee Name</label><br>
+            <input type="text" th:field="*{employee_Name}"  required ><br>
+            <label for="number">Mobile No</label><br>
+            <input type="number" th:field="*{employee_Mobno}" maxlength="10" required ><br>
+            <label for="email"> Email</label><br>
+            <input type="email" th:field="*{employee_Email}" required ><br>
+            <label for="Designation">Designation</label><br>
+            <input type="text" th:field="*{employee_Designation}" required><br>
+            <label for="Department">Department</label><br>
+            <input type="text"  th:field="*{employee_Departement}" required><br>
+            <button>Save</button><br>
+            <a th:href="@{/backToList}">Back to List</a>
+        </form>
+        </div>
+    </section>
+</body>
+</html>
